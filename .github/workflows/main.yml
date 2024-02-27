@@ -1,0 +1,17 @@
+name: remote ssh deployment
+on:
+  push:
+    branches:
+      - main
+jobs:
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Execute Deployment via SSH on NXL-WEB
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.KEY }}
+          script: cd /opt/homepage; git pull && npm run build && systemctl restart homepage
