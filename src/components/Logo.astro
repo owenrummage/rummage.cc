@@ -1,0 +1,13 @@
+---
+import { Image } from "astro:assets";
+
+import logo from "../../public/logo.svg";
+---
+
+<div class="invisible ml-auto mr-auto w-4/5 md:visible">
+    <Image src={logo} alt="Logo" />
+</div>
+<div class="mb:p-0 visible mb-6 ml-auto mr-auto md:invisible md:mb-0">
+    <h1 class="brand text-4xl font-bold text-white">Owen Rummage</h1>
+    <p class="font-bold text-white">Software, Hardware, and Networking</p>
+</div>

@@ -1,0 +1,138 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Logo from "../components/Logo.astro";
+import moment from "moment";
+const response = await fetch("http://localhost:4321/api/projects");
+const projects = await response.json();
+
+var dating_since = moment("2023-06-09").fromNow();
+var alive_since = moment("2005-03-03").fromNow();
+---
+
+<Layout title="Owen Rummage">
+    <Logo />
+
+    <div class="section">
+        <h1>About Me</h1>
+        <!-- Introduction -->
+        <p>
+            Hello! My name is Owen Rummage. I was born {alive_since}. I like to
+            do systems administration and software engineering in my free time.
+            Thanks for visiting my site. I am currently a student at Nashville
+            State studying for an Associates of Applied Sciences in Computer
+            Information Technology. Im also currently dating the love of my life
+            since {dating_since}. I have been playing with computers since I was
+            6 years old, and I have been using Linux since I was 8.
+        </p>
+        <!-- More detailed overview -->
+        <p>
+            I am known for a few things, I operate NixLabs (AS216268) an
+            open-source organizaiton that aids in getting servers and resources
+            to open-source projects all around the internet. In my free time, I
+            like to program and build networks. I mainly program in PHP, however
+            I am also proficient in Javascript, GoLang, and Python. I am
+            extremely experienced with Cisco and Arista networking equiptment
+            along with protocols such as BGP and OSPF. I have 32u of colocation
+            to operate me and my friends servers as part of NixLabs, this is
+            where I run all of my personal services.
+        </p>
+        <!-- Work experience -->
+        <p>
+            I have worked at a few companies in the past doing various things
+            from systems administration to software engineering. Most of that
+            can be found in my Linkedin, located <a
+                href="https://www.linkedin.com/in/owen-rummage-335035245/"
+                >here</a
+            >. Currently, I am employed at a small computer shop locally. My job
+            mainly revolves around fixing desktops and laptops, but occasionally
+            we get an enterprise contracting job where I do network
+            installations or software deployment/configuration. I also do
+            contracting on the side, see below for more details
+        </p>
+    </div>
+
+    <div class="section">
+        <h1>Personal Projects</h1>
+        <!-- Introduction -->
+        <p>
+            Most of my personal projects can be found on my <a
+                href="https://github.com/owenrummage">github</a
+            >, however that is mirrored in the list below for easy viewing.
+            These are the public projects I have done recently. I like to think
+            most of them are pretty cool, but thats for you to decide.
+        </p>
+
+        <ul class="list-disc">
+            {
+                projects.map((data: any) => (
+                    <li>
+                        <a href={data.url}>
+                            {data.name} (+{data.stars})
+                        </a>
+                        : {data.description || "No description, yet..."}
+                    </li>
+                ))
+            }
+        </ul>
+    </div>
+
+    <div class="section">
+        <h1>Hire Me</h1>
+        <!-- Introduction -->
+        <p>
+            I also do a lot of freelance work. I have proficiencies in various
+            skills such as Networking, Software Engineering, and Systems
+            Administration. I am available for hire, below is a list of skills I
+            am proficient at on a professional level.
+        </p>
+        <ul>
+            <li>Enterprise Networking</li>
+            <li>Systems Design / Network Architecture</li>
+            <li>Datacenter Planning</li>
+            <li>Frontend Development (PHP/React)</li>
+            <li>Backend Development (Go/PHP/Typescript)</li>
+            <li>Linux Systems Administration</li>
+        </ul>
+
+        <p>
+            If any of that is of interest to you, feel free to shoot me an <a
+                href="mailto:biz@rummage.cc">email</a
+            >.
+        </p>
+    </div>
+
+    <div class="section">
+        <h1>Internet Profiles</h1>
+        <!-- Section Description -->
+        <p>
+            I, like most people, have many accounts across the internet. Below
+            is a link to a few notable ones (although there are more). Feel free
+            to follow me and you might get the schizofrenic technobabble that
+            comes out of my head.
+        </p>
+        <ul>
+            <li>
+                <a href="https://bsky.app/profile/rummage.cc">BlueSky Social</a>
+            </li>
+            <li><a href="https://github.com/owenrummage">GitHub</a></li>
+            <li>
+                <a href="https://www.linkedin.com/in/owen-rummage-335035245/"
+                    >Linkedin</a
+                >
+            </li>
+        </ul>
+
+        <p>
+            If none of that interests you, you can always reach out on discord: <b
+                >n1xn0v4</b
+            >. If you want a more secure communication feel free to <a
+                href="mailto:hello@rummage.cc">email me</a
+            >. But dont forget to use my <a href="pgpkey">PGP Key</a>.
+        </p>
+    </div>
+    <footer class="ml-auto mr-auto w-screen py-12 pb-24 md:w-3/5">
+        <p class="text-xl font-bold text-white md:text-sm">
+            Thanks for stopping by!
+        </p>
+    </footer>
+</Layout>
