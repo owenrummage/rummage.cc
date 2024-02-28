@@ -3,12 +3,12 @@
 @tailwind utilities;
 
 * {
-    @apply md:font-mono;
-    @apply md:font-mono;
+    @apply lg:font-mono;
+    @apply lg:font-mono;
 }
 .section {
     @apply ml-auto mr-auto w-screen text-white;
-    @apply md:w-3/5;
+    @apply lg:w-3/5;
     h1 {
         @apply text-2xl font-bold;
     }

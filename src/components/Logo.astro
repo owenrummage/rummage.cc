@@ -4,12 +4,23 @@ import { Image } from "astro:assets";
 import logo from "../../public/logo.svg";
 ---
 
-<div class="invisible flex w-full md:visible">
-    <div class="ml-auto mr-auto">
-        <Image src={logo} alt="Logo" />
-    </div>
+<div class="flex hidden lg:block lg:flex">
+    <pre
+        class="brand ml-auto mr-auto text-xl">
+=====================================================================================
+*     ____                         ____                                             *
+*    / __ \_      _____  ____     / __ \__  ______ ___  ____ ___  ____ _____ ____   *
+*   / / / / | /| / / _ \/ __ \   / /_/ / / / / __ `__ \/ __ `__ \/ __ `/ __ `/ _ \  *
+*  / /_/ /| |/ |/ /  __/ / / /  / _, _/ /_/ / / / / / / / / / / / /_/ / /_/ /  __/  *
+*  \____/ |__/|__/\___/_/ /_/  /_/ |_|\__,_/_/ /_/ /_/_/ /_/ /_/\__,_/\__, /\___/   *
+*       Developer  - Systems Architect -  Networking Nerd            /____/         *
+=====================================================================================
+</pre>
 </div>
-<div class="mb:p-0 visible mb-6 ml-auto mr-auto md:invisible md:mb-0">
-    <h1 class="brand text-4xl font-bold text-white">Owen Rummage</h1>
+
+<div class="mb:p-0 mb-6 ml-auto mr-auto lg:mb-0 lg:hidden">
+    <h1 class="brand text-4xl font-bold text-white lg:text-6xl">
+        Owen Rummage
+    </h1>
     <p class="font-bold text-white">Software, Hardware, and Networking</p>
 </div>
