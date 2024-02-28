@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    @apply font-mono;
+}
+
+h1 {
+    color: #ff2768;
+    @apply mb-4 mt-4 text-xl font-bold;
+    @apply lg:text-2xl;
+}
+
+h2 {
+    color: #ff2768;
+    @apply mt-2 text-lg;
+    @apply lg:text-xl;
+}
+
+p {
+    @apply text-sm text-white lg:w-3/6;
+}
+
+ul {
+    @apply mb-4 ml-8 list-disc text-white;
+    @apply lg:ml-12;
+
+    a {
+        color: #ff2768;
+    }
+}
+
+ol {
+    @apply ml-12 list-decimal text-white;
+
+    a {
+        color: #ff2768;
+    }
+}
+
+.brand {
+    color: #ff2768;
+}

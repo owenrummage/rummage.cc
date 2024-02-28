@@ -6,7 +6,7 @@ interface Props {
 
 const { title, description } = Astro.props;
 
-import "../styles.css";
+import "../blog.css";
 ---
 
 <!doctype html>
@@ -17,7 +17,7 @@ import "../styles.css";
         <meta name="viewport" content="width=device-width" />
         <title>{title}</title>
     </head>
-    <body class="h-screen w-screen overflow-x-hidden">
+    <body class="h-screen w-screen overflow-x-hidden text-white lg:p-8">
         <slot />
     </body>
 </html>

@@ -1,0 +1,42 @@
+---
+import BlogLayout from "../../layouts/BlogLayout.astro";
+import Logo from "../../components/Logo.astro";
+
+let posts = await Astro.glob("./*.mdx");
+---
+
+<BlogLayout
+    title="Owen's Blog"
+    description="Ramblings of a schizo packet pusher"
+>
+    <div class="mb:p-0 mb-6 ml-auto mr-auto">
+        <h1>The Schitzo Ramblings of a Packet Pusher</h1>
+        <p>
+            Software, Hardware, Networking, and more; Delivered by a schitzo
+            network engineer with way too little sleep. With a mix of
+            informative explinations, personal hot takes, bad jokes /
+            references, and schizofrenia, dive into an abyss of the incoherent
+            rablings of someone who deserves to be in an insane assylum! Find
+            posts below!
+        </p>
+        <ul class="mt-2">
+            {
+                posts.map((post) => (
+                    <>
+                        <li>
+                            <a class="font-bold" href={post.url}>
+                                {post.frontmatter.title}
+                            </a>{" "}
+                            (Posted {post.frontmatter.date})
+                            <br />
+                            <span class="text-sm text-zinc-400">
+                                {" "}
+                                {post.frontmatter.description}{" "}
+                            </span>
+                        </li>
+                    </>
+                ))
+            }
+        </ul>
+    </div>
+</BlogLayout>
