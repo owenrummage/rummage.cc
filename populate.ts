@@ -9,6 +9,8 @@ octokit.repos
   })
   .then(({ data }) => {
     data.forEach(async (repo) => {
+      await prisma.project.deleteMany();
+
       var id = await prisma.project.upsert({
         where: {
           id: repo.id,
