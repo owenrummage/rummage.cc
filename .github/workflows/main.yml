@@ -14,4 +14,4 @@ jobs:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.KEY }}
-          script: cd /opt/homepage; git pull && npm run build && systemctl restart homepage
+          script: cd /opt/homepage; git pull && npm install && npm run build && systemctl restart homepage
