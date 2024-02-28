@@ -4,7 +4,7 @@ interface Props {
     description: string;
 }
 
-const { title, description } = Astro.props;
+const { title, description, frontmatter } = Astro.props;
 
 import "../blog.css";
 ---
@@ -13,9 +13,16 @@ import "../blog.css";
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <meta name="description" content={description} />
+        <meta
+            name="description"
+            content={frontmatter?.description
+                ? `Owen's Blog - ${frontmatter?.description}`
+                : description}
+        />
         <meta name="viewport" content="width=device-width" />
-        <title>{title}</title>
+        <title>
+            {frontmatter?.title ? `Owen's Blog - ${frontmatter?.title}` : title}
+        </title>
     </head>
     <body class="h-screen w-screen overflow-x-hidden text-white lg:p-8">
         <slot />
