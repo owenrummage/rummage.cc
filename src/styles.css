@@ -32,3 +32,9 @@ a {
     color: #ff2768;
     @apply font-bold;
 }
+
+pre {
+    code {
+        @apply rounded bg-white text-black;
+    }
+}

@@ -1,0 +1,14 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import nftImage from "../../public/nft.png";
+---
+
+<Layout title="Owen Rummage - NFT">
+    <div class="flex h-screen w-screen flex-col items-center justify-center">
+        <pre class="mb-16 text-4xl text-white">Innocent Children as Food</pre>
+        <Image src={nftImage} alt="The NFT" class="mb-4" />
+        <pre
+            class="text-white">How to get: <code>Right Click</code> -> <code>Save Image</code></pre>
+    </div>
+</Layout>
