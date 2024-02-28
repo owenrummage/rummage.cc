@@ -1,0 +1,17 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const response = await fetch("http://localhost:4321/api/randomQuote");
+const quote = await response.json();
+---
+
+<Layout title="Owen Rummage - Page not Found">
+    <div class="flex h-screen w-screen flex-col items-center justify-center">
+        <pre
+            class="brand">
+ The page cannot be found! (404)
+---------------------------------
+           </pre>
+        <pre class="text-white">{quote[0].quote}</pre>
+    </div>
+</Layout>

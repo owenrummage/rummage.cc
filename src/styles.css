@@ -7,7 +7,7 @@
     @apply lg:font-mono;
 }
 .section {
-    @apply ml-auto mr-auto w-screen text-white;
+    @apply ml-auto mr-auto text-white;
     @apply lg:w-3/5;
     h1 {
         @apply text-2xl font-bold;

@@ -20,3 +20,8 @@ model Project {
     url         String
     stars       Int
 }
+
+model Quote {
+    id    Int    @id @default(autoincrement())
+    quote String
+}
