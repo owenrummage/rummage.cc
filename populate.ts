@@ -16,14 +16,14 @@ octokit.repos
         create: {
           name: repo.name,
           description: repo.description,
-          url: repo.url,
+          url: repo.html_url,
           stars: repo.stargazers_count || 0,
           id: repo.id,
         },
         update: {
           name: repo.name,
           description: repo.description,
-          url: repo.url,
+          url: repo.html_url,
           stars: repo.stargazers_count || 0,
         },
       });
