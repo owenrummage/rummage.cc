@@ -1,0 +1,16 @@
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: website-ingress
+  namespace: jor-website
+spec:
+  entryPoints:
+    - websecure
+  routes:
+    - kind: Rule
+      match: Host(`k3s.rummage.cc`)
+      services:
+        - name: website-svc
+          port: 4321
+  tls:
+    secretName: website-cert

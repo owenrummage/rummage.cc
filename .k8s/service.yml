@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: website-svc
+  namespace: jor-website
+  labels:
+    service: website
+spec:
+  type: ClusterIP
+  ports:
+    - name: http
+      port: 4321
+      protocol: TCP
+  selector:
+    app: website

@@ -18,8 +18,15 @@ h2 {
     @apply lg:text-xl;
 }
 
+h3 {
+    @apply brand mb-1 mt-2;
+}
+
 p {
     @apply text-sm text-white lg:w-3/6;
+    code {
+        @apply brand font-bold;
+    }
 }
 
 ul {
