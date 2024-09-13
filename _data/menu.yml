@@ -1,0 +1,28 @@
+# For documentation on this file, see:
+# https://github.com/riggraz/no-style-please#customize-the-menu
+
+entries:
+  - title: info
+    entries:
+      - title: "CIT student by day, Systems Administrator by night <a href='/about'>...</a>"
+      - title: "<a href='https://github.com/owenrummage'>GitHub</a>, <a href='https://www.linkedin.com/in/owen-rummage-335035245/'>Linkedin</a>, <a href='https://bsky.app/profile/rummage.cc'>Bluesky</a>"
+      - title: RSS Feed
+        url: feed.xml
+      - title: Hire Me
+        url: /hire
+  - title: Projects
+    entries:
+      - title: NixLabs Networks
+        url: https://nixlabs.dev
+      - title: IPInfo CLI
+        url: https://github.com/owenrummage/ipinfo
+      - title: PostStuff Online
+        url: https://github.com/owenrummage/PostStuff-Online
+      - title: Command Money CLI
+        url: https://github.com/owenrummage/CommandMoney
+  - title: all posts
+    post_list:
+      limit: 5
+      show_more: true
+      show_more_text: See archive...
+      show_more_url: archive.html
