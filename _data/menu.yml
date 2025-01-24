@@ -14,12 +14,14 @@ entries:
     entries:
       - title: NixLabs Networks
         url: https://nixlabs.dev
-      - title: IPInfo CLI
-        url: https://github.com/owenrummage/ipinfo
-      - title: PostStuff Online
-        url: https://github.com/owenrummage/PostStuff-Online
+      - title: svidentity
+        url: https://github.com/owenrummage/svidentity
+      - title: Gifter
+        url: https://github.com/owenrummage/Gifts-Site
       - title: Command Money CLI
         url: https://github.com/owenrummage/CommandMoney
+      - title: Dotted Map (now without alaska!)
+        url: https://github.com/owenrummage/dotted-map-no-alaska
   - title: all posts
     post_list:
       limit: 5
