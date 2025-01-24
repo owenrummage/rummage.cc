@@ -1,7 +1,7 @@
-FROM ruby:3.1.1 AS builder
+FROM ruby:3.1.2 AS builder
 RUN apt-get update -qq && apt-get install -y build-essential nodejs
 WORKDIR /srv/jekyll
-COPY Gemfile ./
+COPY Gemfile no-style-please.gemspec ./
 RUN bundle install
 COPY . .
 RUN chown 1000:1000 -R /srv/jekyll
